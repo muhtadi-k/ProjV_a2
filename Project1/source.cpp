@@ -14,6 +14,12 @@ struct STUDENT_DATA
 
 int main()
 {
+    #if defined _DEBUG
+        cout << "debug build\n";
+    #else
+        cout << "release build\n";
+    #endif
+
     //variable declaration
     string line;
     ifstream file;
@@ -35,11 +41,14 @@ int main()
         stringstream ss(line);
         getline(ss, test.LName, ','); //seperate lines into last and first name using comma
         getline(ss, test.FName, ',');   // and store into 'test' object
-        v.push_back(test); //push object into vector
-       
+        v.push_back(test); //push object into vector  
+
+
+        #if defined _DEBUG
         cout << test.LName << test.FName << endl;
+        #endif
+
     }
-    
 
     file.close();
     return 1;
