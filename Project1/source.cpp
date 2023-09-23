@@ -5,7 +5,7 @@
 #include <vector>
 
 using namespace std;
-#define PRE_RELEASE
+//#define PRE_RELEASE
 
 struct STUDENT_DATA
 {
@@ -24,6 +24,8 @@ int main()
       
     #ifdef PRE_RELEASE
             cout << "pre-release build\n";
+    #else
+            cout << "standard build\n";
     #endif
 
 
