@@ -19,7 +19,7 @@ int main()
     #ifdef _DEBUG
         cout << "debug build\n";
     #else
-        cout << "standard build\n";
+        cout << "release build\n";
     #endif
       
     #ifdef PRE_RELEASE
